@@ -1,0 +1,35 @@
+/*FLEXBOX*/
+/*
+Sempre precisa de estrutura pai-filho;
+A maioria é definida no pai
+*/
+section {
+    align-items: center; /*alinhamento vertical*/
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /*controla a quebra do elemento*/
+    /* flex-flow: row wrap; substitui o flex-direction e flex-wrap */
+    height: 500px;
+    justify-content: space-between; /*alinhamento horizontal*/
+    padding: 1em 0;
+    width: 1000px;
+}
+
+article {
+    box-sizing: border-box;
+    background-color: pink;
+    border: 1px solid black;
+    flex-basis: 30px; /*define o tamanho do item*/
+    height: 300px;
+}
+
+article:nth-child(2) {
+    height: 150px;
+    flex-grow: 0; /*cresce em relação à largura que está sobrando*/
+    order: -1; /*altera ordem dos elementos do flexbox (em relação ao seu inicial)*/
+}
+
+article:nth-child(1) {
+    flex-shrink: 2; /*encolhe em relação à largura que está sobrando*/
+}
