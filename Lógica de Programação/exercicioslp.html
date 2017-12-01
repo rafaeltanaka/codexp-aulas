@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercícios LP</title>
+</head>
+<body>
+    <h1>Lógica com Javascript</h1>
+    <p>Exercícios em: https://github.com/code-xp-front/handson/tree/master/logica-de-programacao</p>
+    <h2>Exercício 4</h2>
+    <p>Faça um programa que receba o nome, o peso e a altura de uma pessoa. Calcule e imprima o nome e o IMC dessa pessoa. (IMC
+        = peso / altura2).</p>
+    <button type="button" onclick="myFunction()">Teste!</button>
+    <script>
+        function myFunction() {
+            //entrada
+            var nome = prompt('digite seu nome');
+            var peso = prompt('digite seu peso (Kg)');
+            var altura = parseFloat(prompt('digite sua altura (m)'));
+            //processamento
+            peso = parseFloat(peso);
+            var imc = peso / (altura * altura);
+            //saída
+            console.log(nome + " " + imc.toFixed(2));
+        }
+    </script>
+    <h2>Exercício 5</h2>
+    <p>Faça um programa que receba a medida em centímetros e exiba esse número em polegadas. OBS: Uma polegada equivale a 2.5
+        centímetros.
+    </p>
+    <button type="button" onclick="myFunction()">Teste!</button>
+    <script>
+        function myFunction() {
+            //entrada
+            var cm1 = parseFloat(prompt('digite um número em centímetros'));
+            //processamento
+            var pol1 = cm1 / 2.5;
+            //saída
+            console.log(pol1);
+        }
+    </script>
+    <h2>Exercício 6</h2>
+    <p>Faça um programa que receba a medida em polegadas e exiba esse número em centímetros.</p>
+    <button type="button" onclick="myFunction()">Teste!</button>
+    <script>
+        function myFunction() {
+            //entrada
+            var pol2 = parseFloat(prompt('digite um número em polegadas'));
+            //processamento
+            var cm2 = pol2 * 2.5;
+            //saída
+            console.log(cm2);
+        }
+    </script>
+    <h2>Exercício 11</h2>
+    <p>Faça um programa que receba um número inteiro do usuário e informe se este número é positivo ou negativo.</p>
+    <button type="button" onclick="myFunction()">Teste!</button>
+    <script>
+        function myFunction() {
+            //entrada
+            var num1 = parseFloat(prompt('digite um número positivo ou negativo'));
+            //processamento
+            if (num1 < 0) {
+                var posNeg = "Negativo";
+            } else if (num1 > 0) {
+                var posNeg = "Positivo";
+            } else {
+                var posNeg = "Zero"
+            }
+            //saída
+            console.log(posNeg);
+        }
+    </script>
+    <h2>Exercício 12</h2>
+    <p>Faça um programa que receba um número do usuário e informe se este número é par ou ímpar.</p>
+    <button type="button" onclick="myFunction()">Teste!</button>
+    <script>
+        function myFunction() {
+            //entrada
+            var num2 = parseInt(prompt('digite um número'));
+            //processamento
+            if (num2 % 2 == 0) {
+                var oddEven = "Par";
+            } else {
+                var oddEven = "Ímpar";
+            };
+            //saída
+            console.log(oddEven);
+        }
+    </script>
+    <h2>Exercício 13</h2>
+    <p>Faça um programa que receba um número de usuário e exiba este número, apenas se for par.</p>
+    <button type="button" onclick="myFunction()">Teste!</button>
+    <script>
+        function myFunction() {
+            //entrada
+            var num3 = parseInt(prompt('digite um número'));
+            //processamento
+            if (num3 % 2 == 0) {
+                var even = num3;
+            } else {
+                var even = "Ímpar";
+            };
+            //saída
+            console.log(odd);
+        }
+    </script>
+    <h2>Exercício 14</h2>
+    <p>Faça um programa que receba o preço de um produto e o seu código de origem e imprima a sua procedência, utilizando uma
+        estrutura IF sem o ELSE, para cada item abaixo. A procedência obedece a seguinte tabela: Código de Origem Procedência
+        1 Sul 2 Norte 3 Leste 4 Oeste 5 ou 6 Nordeste 7, 8 ou 9 Sudeste 10 até 20 Centro-Oeste 21 até 30 Sem definição</p>
+    <button type="button" onclick="myFunction()">Teste!</button>
+    <script>
+        function myFunction() {
+            //entrada
+            var price1 = parseInt(prompt('digite o preço'));
+            var origincode1 = parseInt(prompt('digite o código de origem'))
+            //processamento
+            if (origincode1 == 1) {
+                var origin1 = "Sul";
+            }
+            if (origincode1 == 2) {
+                var origin1 = "Norte";
+            }
+            if (origincode1 == 3) {
+                var origin1 = "Leste";
+            }
+            if (origincode1 == 4) {
+                var origin1 = "Oeste";
+            }
+            if (origincode1 == 5 || origincode1 == 6) {
+                var origin1 = "Nordeste";
+            }
+            if (origincode1 > 6 && origincode1 < 10) {
+                var origin1 = "Sudeste";
+            }
+            if (origincode1 > 9 && origincode1 < 21) {
+                var origin1 = "Centro-Oeste";
+            }
+            if (origincode1 > 20 && origincode1 < 31) {
+                var origin1 = "Sem definição";
+            }
+            //saída
+            alert("R$ " + price1 + " " + origin1);
+        }
+    </script>
+    <h2>Exercício 15</h2>
+    <p>Faça um programa que receba 4 notas de um aluno, calcule e imprima a média aritmética das notas e a mensagem de APROVADO
+        para média superior ou igual a 7,0 RECUPERAÇÃO para notas entre 5.0 e 7,0 ou a mensagem de REPROVADO para média inferior
+        a 5,0.</p>
+    <button type="button" onclick="myFunction()">Teste!</button>
+    <script>
+        function myFunction() {
+            //entrada
+            var grades1 = {
+                grade1: parseFloat(prompt('digite a 1ª nota')),
+                grade2: parseFloat(prompt('digite a 2ª nota')),
+                grade3: parseFloat(prompt('digite a 3ª nota')),
+                grade4: parseFloat(prompt('digite a 4ª nota')),
+            }
+            //processamento
+            var average1 = (grades1.grade1 + grades1.grade2 + grades1.grade3 + grades1.grade4) / 4;
+            if (average1 >= 7) {
+                var message1 = "APROVADO";
+            } else if (average1 >= 5 && average1 < 7) {
+                var message1 = "RECUPERAÇÃO";
+            } else {
+                var message1 = "REPROVADO"
+            }
+            //saída
+            alert("Média " + average1 + " " + message1);
+        }
+    </script>
+    <h2>Exercício Extra1</h2>
+    <p>Elabore um programa que solicite um número entre 1 e 12 (você deve validar com if simples) e exibe o mês correspondente
+        à esse número com if composto.</p>
+    <button type="button" onclick="myFunction()">Teste!</button>
+    <script>
+        function myFunction() {
+            //entrada
+            var num4 = parseInt(prompt('digite um número entre 1 e 12'));
+            //processamento
+            if (num4 < 1 || num4 > 12) {
+                var month = "Número incorreto";
+            } else if (num4 == 1) {
+                var month = "Janeiro";
+            } else if (num4 == 2) {
+                var month = "Fevereiro";
+            } else if (num4 == 3) {
+                var month = "Março";
+            } else if (num4 == 4) {
+                var month = "Abril";
+            } else if (num4 == 5) {
+                var month = "Maio";
+            } else if (num4 == 6) {
+                var month = "Junho";
+            } else if (num4 == 7) {
+                var month = "Julho";
+            } else if (num4 == 8) {
+                var month = "Agosto";
+            } else if (num4 == 9) {
+                var month = "Setembro";
+            } else if (num4 == 10) {
+                var month = "Outubro";
+            } else if (num4 == 11) {
+                var month = "Novembro";
+            } else if (num4 == 12) {
+                var month = "Dezembro";
+            }
+            //saída
+            alert(month);
+        }
+    </script>
+    <h2>Exercício Extra1 com switch</h2>
+    <p>Elabore um programa que solicite um número entre 1 e 12 (você deve validar com if simples) e exibe o mês correspondente
+        à esse número com if composto.</p>
+    <button type="button" onclick="myFunction()">Teste!</button>
+    <script>
+        function myFunction() {
+            //entrada
+            var num5 = parseInt(prompt('digite um número entre 1 e 12'));
+            //processamento
+            switch (num5) { /*Utilizado para testar a mesma variável várias vezes*/
+                case 1:
+                    alert("Janeiro")
+                    break;
+                case 2:
+                    alert("Fevereiro")
+                    break;
+                case 3:
+                    alert("Março")
+                    break;
+                case 4:
+                    alert("Abril")
+                    break;
+                case 5:
+                    alert("Maio")
+                    break;
+                case 6:
+                    alert("Junho")
+                    break;
+                case 7:
+                    alert("Julho")
+                    break;
+                case 8:
+                    alert("Agosto")
+                    break;
+                case 9:
+                    alert("Setembro")
+                    break;
+                case 10:
+                    alert("Outubro")
+                    break;
+                case 11:
+                    alert("Novembro")
+                    break;
+                case 12:
+                    alert("Dezembro")
+                    break;
+                default:
+                    alert("Digite um número entre 1 e 12")
+                    break;
+            }
+            //saída
+        }
+    </script>
+</body>
+</html>
