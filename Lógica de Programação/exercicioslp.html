@@ -7,15 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exercícios LP</title>
 </head>
+
 <body>
     <h1>Lógica com Javascript</h1>
     <p>Exercícios em: https://github.com/code-xp-front/handson/tree/master/logica-de-programacao</p>
     <h2>Exercício 4</h2>
     <p>Faça um programa que receba o nome, o peso e a altura de uma pessoa. Calcule e imprima o nome e o IMC dessa pessoa. (IMC
         = peso / altura2).</p>
-    <button type="button" onclick="myFunction()">Teste!</button>
+    <button type="button" onclick="myFunction4()">Teste!</button>
     <script>
-        function myFunction() {
+        function myFunction4() {
             //entrada
             var nome = prompt('digite seu nome');
             var peso = prompt('digite seu peso (Kg)');
@@ -31,9 +32,9 @@
     <p>Faça um programa que receba a medida em centímetros e exiba esse número em polegadas. OBS: Uma polegada equivale a 2.5
         centímetros.
     </p>
-    <button type="button" onclick="myFunction()">Teste!</button>
+    <button type="button" onclick="myFunction5()">Teste!</button>
     <script>
-        function myFunction() {
+        function myFunction5() {
             //entrada
             var cm1 = parseFloat(prompt('digite um número em centímetros'));
             //processamento
@@ -44,9 +45,9 @@
     </script>
     <h2>Exercício 6</h2>
     <p>Faça um programa que receba a medida em polegadas e exiba esse número em centímetros.</p>
-    <button type="button" onclick="myFunction()">Teste!</button>
+    <button type="button" onclick="myFunction6()">Teste!</button>
     <script>
-        function myFunction() {
+        function myFunction6() {
             //entrada
             var pol2 = parseFloat(prompt('digite um número em polegadas'));
             //processamento
@@ -57,9 +58,9 @@
     </script>
     <h2>Exercício 11</h2>
     <p>Faça um programa que receba um número inteiro do usuário e informe se este número é positivo ou negativo.</p>
-    <button type="button" onclick="myFunction()">Teste!</button>
+    <button type="button" onclick="myFunction11()">Teste!</button>
     <script>
-        function myFunction() {
+        function myFunction11() {
             //entrada
             var num1 = parseFloat(prompt('digite um número positivo ou negativo'));
             //processamento
@@ -76,9 +77,9 @@
     </script>
     <h2>Exercício 12</h2>
     <p>Faça um programa que receba um número do usuário e informe se este número é par ou ímpar.</p>
-    <button type="button" onclick="myFunction()">Teste!</button>
+    <button type="button" onclick="myFunction12()">Teste!</button>
     <script>
-        function myFunction() {
+        function myFunction12() {
             //entrada
             var num2 = parseInt(prompt('digite um número'));
             //processamento
@@ -93,16 +94,16 @@
     </script>
     <h2>Exercício 13</h2>
     <p>Faça um programa que receba um número de usuário e exiba este número, apenas se for par.</p>
-    <button type="button" onclick="myFunction()">Teste!</button>
+    <button type="button" onclick="myFunction13()">Teste!</button>
     <script>
-        function myFunction() {
+        function myFunction13() {
             //entrada
             var num3 = parseInt(prompt('digite um número'));
             //processamento
             if (num3 % 2 == 0) {
-                var even = num3;
+                var even1 = num3;
             } else {
-                var even = "Ímpar";
+                var even1 = "Ímpar";
             };
             //saída
             console.log(odd);
@@ -112,9 +113,9 @@
     <p>Faça um programa que receba o preço de um produto e o seu código de origem e imprima a sua procedência, utilizando uma
         estrutura IF sem o ELSE, para cada item abaixo. A procedência obedece a seguinte tabela: Código de Origem Procedência
         1 Sul 2 Norte 3 Leste 4 Oeste 5 ou 6 Nordeste 7, 8 ou 9 Sudeste 10 até 20 Centro-Oeste 21 até 30 Sem definição</p>
-    <button type="button" onclick="myFunction()">Teste!</button>
+    <button type="button" onclick="myFunction14()">Teste!</button>
     <script>
-        function myFunction() {
+        function myFunction14() {
             //entrada
             var price1 = parseInt(prompt('digite o preço'));
             var origincode1 = parseInt(prompt('digite o código de origem'))
@@ -151,9 +152,9 @@
     <p>Faça um programa que receba 4 notas de um aluno, calcule e imprima a média aritmética das notas e a mensagem de APROVADO
         para média superior ou igual a 7,0 RECUPERAÇÃO para notas entre 5.0 e 7,0 ou a mensagem de REPROVADO para média inferior
         a 5,0.</p>
-    <button type="button" onclick="myFunction()">Teste!</button>
+    <button type="button" onclick="myFunction15()">Teste!</button>
     <script>
-        function myFunction() {
+        function myFunction15() {
             //entrada
             var grades1 = {
                 grade1: parseFloat(prompt('digite a 1ª nota')),
@@ -177,9 +178,9 @@
     <h2>Exercício Extra1</h2>
     <p>Elabore um programa que solicite um número entre 1 e 12 (você deve validar com if simples) e exibe o mês correspondente
         à esse número com if composto.</p>
-    <button type="button" onclick="myFunction()">Teste!</button>
+    <button type="button" onclick="myFunctione1()">Teste!</button>
     <script>
-        function myFunction() {
+        function myFunctione1() {
             //entrada
             var num4 = parseInt(prompt('digite um número entre 1 e 12'));
             //processamento
@@ -217,9 +218,9 @@
     <h2>Exercício Extra1 com switch</h2>
     <p>Elabore um programa que solicite um número entre 1 e 12 (você deve validar com if simples) e exibe o mês correspondente
         à esse número com if composto.</p>
-    <button type="button" onclick="myFunction()">Teste!</button>
+    <button type="button" onclick="myFunctione1s()">Teste!</button>
     <script>
-        function myFunction() {
+        function myFunctione1s() {
             //entrada
             var num5 = parseInt(prompt('digite um número entre 1 e 12'));
             //processamento
@@ -267,5 +268,220 @@
             //saída
         }
     </script>
+    <h2>Exercício apostila página 34</h2>
+    <p>Faça um programa que solicite ao usuário para que informe um número par. Após o usuário digitar um número par você deve
+        dar um alerta informando o número par digitado pelo usuário e encerrar o programa.</p>
+    <button type="button" onclick="myFunctioneap34()">Teste!</button>
+    <script>
+        function myFunctioneap34() {
+            //entrada
+            var num6 = parseInt(prompt("Digite um número par"));
+            //processamento
+            while (num6 % 2 == 1 || num6 == 0) {
+                var num6 = parseInt(prompt("Este número não é par! Digite um número par"));
+            }
+            //saída
+            alert("Número par " + num6);
+        }
+    </script>
+    <h2>Exercício 21 usando FOR</h2>
+    <p>Faça um programa que receba 15 números inteiros e imprima na tela a somatória dos 15 números.</p>
+    <p id="e21f"></p>
+    <button type="button" onclick="myFunction21f()">Teste!</button>
+    <script>
+        function myFunction21f() {
+            //entrada
+            var sum = 0;
+            //processamento
+            for (var cont = 1; cont <= 3; cont++) {
+                var num = parseInt(prompt("Digite um número!"));
+                sum = sum + num;
+            }
+            //saída
+            document.getElementById("e21f").innerHTML = "Somatória = " + sum;
+        }
+    </script>
+    <h2>Exercício 21 usando WHILE</h2>
+    <p>Faça um programa que receba 15 números inteiros e imprima na tela a somatória dos 15 números.</p>
+    <button type="button" onclick="myFunction21w()">Teste!</button>
+    <script>
+        function myFunction21w() {
+            //entrada
+            var sum1 = 0;
+            var num7 = 0;
+            var cont1 = 1;
+            //processamento
+            while (cont1 <= 15) {
+                num7 = parseInt(prompt("Digite um número"));
+                sum1 = sum1 + num7;
+                cont1 = cont1 + 1;
+            }
+            //saída
+            alert("Soma total = " + sum1);
+        }
+    </script>
+    <h2>Exercício 22 usando FOR</h2>
+    <p>Faça um programa que imprima os números impares de 0 a 50.</p>
+    <p id="e22f"></p>
+    <button type="button" onclick="myFunction22f()">Teste!</button>
+    <script>
+        function myFunction22f() {
+            //entrada
+            
+            //processamento
+            for (var num = 1; num <= 50; num += 2) {
+                document.getElementById("e22f").innerHTML += num + " ";
+            }
+            //saída
+            alert("Fim!");
+        }
+    </script>
+    <h2>Exercício 22 usando WHILE</h2>
+    <p>Faça um programa que imprima os números impares de 0 a 50.</p>
+    <button type="button" onclick="myFunction22w()" id="e22w">Teste!</button>
+    <script>
+        function myFunction22w() {
+            //entrada
+            var odd2 = 1;
+            //processamento
+            while (odd2 <= 50) {
+                // document.write(odd2 + " ");
+                var newSpan = document.createElement("span");
+                var newCont = document.createTextNode(odd2 + " ");
+                newSpan.appendChild(newCont); //adiciona o nó de texto à nova div criada
+                var actual = document.getElementById("e22w"); // adiciona o novo elemento criado e seu conteúdo ao DOM
+                document.body.insertBefore(newSpan, actual);
+
+                var odd2 = odd2 + 2;
+            }
+            //saída
+            alert("Fim!");
+        }
+    </script>
+    <h2>Exercício 23 usando FOR</h2>
+    <p>Faça um programa que imprima na tela a tabuada de um número qualquer escolhido pelo usuário.</p>
+    <button type="button" onclick="myFunction23w()" id="e23f">Teste!</button>
+    <script>
+        function myFunction23f() {
+            //entrada
+            var num = parseInt(prompt("Insira um número!"));
+            //processamento
+            for (var cont = 1; cont <= 10; cont++) {
+                // document.write(num + "x" + cont + "=" + cont * num + " ");
+                var newP = document.createElement("p");
+                var newCont = document.createTextNode(num + "x" + cont + "=" + cont * num + " ");
+                newP.appendChild(newCont); //adiciona o nó de texto à nova div criada
+                var actual = document.getElementById("e23w"); // adiciona o novo elemento criado e seu conteúdo ao DOM
+                document.body.insertBefore(newP, actual);
+            }
+            //saída
+            alert("Fim!");
+        }
+    </script>
+    <h2>Exercício 23 usando WHILE</h2>
+    <p>Faça um programa que imprima na tela a tabuada de um número qualquer escolhido pelo usuário.</p>
+    <button type="button" onclick="myFunction23w()" id="e23w">Teste!</button>
+    <script>
+        function myFunction23w() {
+            //entrada
+            var num = parseInt(prompt("Insira um número!"));
+            var cont = 1;
+            //processamento
+            while (cont <= 10) {
+                // document.write(num + "x" + cont + "=" + cont * num + " ");
+                var newP = document.createElement("p");
+                var newCont = document.createTextNode(num + "x" + cont + "=" + cont * num + " ");
+                newP.appendChild(newCont); //adiciona o nó de texto à nova div criada
+                var actual = document.getElementById("e23w"); // adiciona o novo elemento criado e seu conteúdo ao DOM
+                document.body.insertBefore(newP, actual);
+
+                cont++;
+            }
+            //saída
+            alert("Fim!");
+        }
+    </script>
+    <h2>Exercício 24 usando FOR</h2>
+    <p>Faça um programa que imprima na tela a tabuada de 1 a 10.</p>
+    <p id="e24f"></p>
+    <button type="button" onclick="myFunction24f()">Teste!</button>
+    <script>
+        function myFunction24f() {
+            //entrada
+            
+            //processamento
+            for (var i = 1; i <= 10; i++) {
+                document.getElementById("e24f").innerHTML += "Tabuada do " + i + "<br>";
+                for (var y = 1; y <= 10; y++) {
+                    document.getElementById("e24f").innerHTML += y + " x " + i + " = " + i * y + " ";
+                }
+                document.getElementById("e24f").innerHTML += "<br>";
+            }
+            //saída
+            alert("Fim!");
+        }
+    </script>
+    <h2>Exercício 24 usando WHILE</h2>
+    <p>Faça um programa que imprima na tela a tabuada de 1 a 10.</p>
+    <p id="e24w"></p>
+    <button type="button" onclick="myFunction24w()">Teste!</button>
+    <script>
+        function myFunction24w() {
+            //entrada
+            var cont = 1;
+            var num = 1;
+            //processamento
+            while (num <= 10) {
+                document.getElementById("e24w").innerHTML += "Tabuada do " + num + "<br>";
+                while (cont <= 10) {
+                    document.getElementById("e24w").innerHTML += cont + " x " + num + " = " + cont * num + " " + "<br>";
+                    cont++;
+                }
+                cont = 1;
+                num++;
+            }
+            //saída
+            alert("Fim!");
+        }
+    </script>
+    <h2>Exercício 25 usando FOR</h2>
+    <p>Uma certa firma fez uma pesquisa de mercado para saber se as pessoas gostaram ou não de um determinado produto lançado. Para isso forneceu o sexo do entrevistado e sua resposta (sim ou não). Sabendo que foram entrevistadas 10 pessoas, faça um programa que calcule e imprima:</p>
+    <p>a. O número de pessoas que responderam SIM;</p>
+    <p>b. O número de pessoas que responderam NÃO;</p>
+    <p>c. O número de mulheres que responderam SIM;</p>
+    <p>d. A porcentagem de homens que responderam NÃO entre todos os homens analisados.</p>
+    <p id="e25f"></p>
+    <button type="button" onclick="myFunction25f()">Teste!</button>
+    <script>
+        function myFunction25w() {
+            //entrada
+            
+            //processamento
+            
+            //saída
+            
+        }
+    </script>
+    <h2>Exercício 25 usando WHILE</h2>
+    <p>Uma certa firma fez uma pesquisa de mercado para saber se as pessoas gostaram ou não de um determinado produto lançado. Para isso forneceu o sexo do entrevistado e sua resposta (sim ou não). Sabendo que foram entrevistadas 10 pessoas, faça um programa que calcule e imprima:</p>
+    <p>a. O número de pessoas que responderam SIM;</p>
+    <p>b. O número de pessoas que responderam NÃO;</p>
+    <p>c. O número de mulheres que responderam SIM;</p>
+    <p>d. A porcentagem de homens que responderam NÃO entre todos os homens analisados.</p>
+    <p id="e25w"></p>
+    <button type="button" onclick="myFunction25w()">Teste!</button>
+    <script>
+        function myFunction25w() {
+            //entrada
+            
+            //processamento
+            
+            //saída
+            
+        }
+    </script>
+
+
+
 </body>
 </html>
