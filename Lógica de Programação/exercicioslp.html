@@ -327,7 +327,7 @@
     <script>
         function myFunction22f() {
             //entrada
-            
+
             //processamento
             for (var num = 1; num <= 50; num += 2) {
                 document.getElementById("e22f").innerHTML += num + " ";
@@ -408,7 +408,7 @@
     <script>
         function myFunction24f() {
             //entrada
-            
+
             //processamento
             for (var i = 1; i <= 10; i++) {
                 document.getElementById("e24f").innerHTML += "Tabuada do " + i + "<br>";
@@ -445,43 +445,93 @@
         }
     </script>
     <h2>Exercício 25 usando FOR</h2>
-    <p>Uma certa firma fez uma pesquisa de mercado para saber se as pessoas gostaram ou não de um determinado produto lançado. Para isso forneceu o sexo do entrevistado e sua resposta (sim ou não). Sabendo que foram entrevistadas 10 pessoas, faça um programa que calcule e imprima:</p>
+    <p>Uma certa firma fez uma pesquisa de mercado para saber se as pessoas gostaram ou não de um determinado produto lançado.
+        Para isso forneceu o sexo do entrevistado e sua resposta (sim ou não). Sabendo que foram entrevistadas 10 pessoas,
+        faça um programa que calcule e imprima:</p>
     <p>a. O número de pessoas que responderam SIM;</p>
     <p>b. O número de pessoas que responderam NÃO;</p>
     <p>c. O número de mulheres que responderam SIM;</p>
     <p>d. A porcentagem de homens que responderam NÃO entre todos os homens analisados.</p>
-    <p id="e25f"></p>
-    <button type="button" onclick="myFunction25f()">Teste!</button>
+    <p id="ex25f"></p>
+    <button type="button" onclick="e25F()">Teste!</button>
     <script>
-        function myFunction25w() {
+        function e25F() {
             //entrada
-            
+            var male = 0;
+            var female = 0;
+            var yes = 0;
+            var no = 0;
+            var maleNo = 0;
+            var femaleYes = 0;
+            var answer = null;
             //processamento
-            
+            for (var counter = 1; counter <= 6; ) {
+                var gender = prompt("Digite M para sexo masculino, F para sexo feminino");
+                if (gender == "M") {
+                    answer = prompt("Gostou do produto? (S para sim, N para não)");
+                    for (answer; answer == "S" || answer == "N"; ) {
+                        if (answer == "S") {
+                            male++;
+                            yes++;
+                            counter++;
+                        } else if (answer == "N") {
+                            male++;
+                            maleNo++;
+                            no++;
+                            counter++;
+                        } else {
+                            alert("Responsta inválida!");
+                        }
+                    }
+                } else if (gender == "F") {
+                    answer = prompt("Gostou do produto? (S para sim, N para não)");
+                    for (answer; answer == "S" || answer == "N"; ) {
+                        if (answer == "S") {
+                            female++;
+                            counter++;
+                            femaleYes++;
+                            yes++;
+                        } else if (answer == "N") {
+                            female++;
+                            counter++;
+                            no++;
+                        } else {
+                            alert("Responsta inválida!");
+                        }
+                    }
+                } else {
+                    alert("Digite novamente o sexo!");
+                }
+            var pMaleNo = maleNo / male;
+            }
             //saída
-            
+            document.getElementById("ex25f").innerHTML = "Número de pessoas que responderam SIM: " + yes + "\n" +
+            "Número de pessoas que responderam NÃO: " + No + "\n" +
+            "Número de mulheres que responderam SIM: " + femaleYes + "\n" +
+            "Porcentagem de homens que responderam NÃO entre todos os homens analisados: " + pMaleNo + ".";
         }
     </script>
     <h2>Exercício 25 usando WHILE</h2>
-    <p>Uma certa firma fez uma pesquisa de mercado para saber se as pessoas gostaram ou não de um determinado produto lançado. Para isso forneceu o sexo do entrevistado e sua resposta (sim ou não). Sabendo que foram entrevistadas 10 pessoas, faça um programa que calcule e imprima:</p>
+    <p>Uma certa firma fez uma pesquisa de mercado para saber se as pessoas gostaram ou não de um determinado produto lançado.
+        Para isso forneceu o sexo do entrevistado e sua resposta (sim ou não). Sabendo que foram entrevistadas 10 pessoas,
+        faça um programa que calcule e imprima:</p>
     <p>a. O número de pessoas que responderam SIM;</p>
     <p>b. O número de pessoas que responderam NÃO;</p>
     <p>c. O número de mulheres que responderam SIM;</p>
     <p>d. A porcentagem de homens que responderam NÃO entre todos os homens analisados.</p>
-    <p id="e25w"></p>
-    <button type="button" onclick="myFunction25w()">Teste!</button>
+    <p id="ex25w"></p>
+    <button type="button" onclick="e25W()">Teste!</button>
     <script>
-        function myFunction25w() {
+        function e25W() {
             //entrada
-            
+
             //processamento
-            
+
             //saída
-            
+
         }
     </script>
 
-
-
 </body>
+
 </html>

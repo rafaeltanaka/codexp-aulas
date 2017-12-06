@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h2>Exemplo Array 1</h2>
+    <p id="ar1"></p>
+    <button type="button" onclick="array1()">Teste!</button>
+    <script>
+        function array1() {
+            var nome1 = "Yago";
+            var nome2 = "Alex";
+            var nomes = []; /* array -- matriz(?) */
+            nomes[0] = "Yago"; /* [0], [1], [2] índices */
+            nomes[1] = "Alex";
+            nomes[2] = "Guilherme";
+            nomes[3] = "Maria";
+            for (var i = 4; i >= 4 && i <= 6; i++) {
+                nomes[i] = prompt("Digite um nome");
+            };
+            document.getElementById("ar1").innerHTML = nomes
+        }
+    </script>
+    <h2>Exercício Array 1</h2>
+    <p>Faça um programa que solicite 5 números do usuário e guarde da seguinte forma:</p>
+    <p>Se for par, multiplicar por 2;</p>
+    <p>Se for ímpar, apenas guarde no array.</p>
+    <p id="ex0"></p>
+    <p id="ex1"></p>
+    <p id="ex2"></p>
+    <button type="button" onclick="exa1()">Teste!</button>
+    <script>
+        function exa1() {
+            var numeros = [];
+            for (var i = 0; i <= 4; i++) {
+                numero = parseFloat(prompt("Digite um número"));
+                if (numero % 2 == 0) {
+                    numeros[i] = numero * 2;
+                    document.getElementById("ex0").innerHTML += numero;
+                    document.getElementById("ex1").innerHTML += numero * 2;
+                } else {
+                    numeros[i] = numero;
+                    document.getElementById("ex0").innerHTML += numero;
+                    document.getElementById("ex1").innerHTML += numero;
+                }
+            };
+            console.log(numeros);
+            document.getElementById("ex2").innerHTML = numeros
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Exemplo Função 1</h2>
+    <p id="ex1"></p>
+    <button type="button" onclick="ef1()">Teste!</button>
+    <script>
+        function soma (a, b) {
+            return a + b;
+        }
+        function subtracao (a, b) {
+            var resultado = a - b;
+            return resultado;
+        }
+        function multiplicacao (a, b) {
+            return a * b;
+        }
+        function divisao (a, b) {
+            if (b == 0) {
+                return "Divisão por zero!";
+            } else {
+                return a / b;
+            }
+        }
+        function ef1() {
+            //entrada
+            var x = parseInt(prompt("Digite o primeiro número"));
+            var y = parseInt(prompt("Digite o segundo número"));
+            var operacao = parseInt(prompt("Digite a operação desejada\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão"));
+            //processamento
+            if (operacao == 1) {
+                document.getElementById("ex1").innerHTML += soma (x, y);
+            } else if (operacao == 2) {
+                document.getElementById("ex1").innerHTML += subtracao (x, y);
+            } else if (operacao == 3) {
+                document.getElementById("ex1").innerHTML += multiplicacao (x, y);
+            } else if (operacao == 4) {
+                document.getElementById("ex1").innerHTML += divisao (x, y);
+            } else {
+                document.getElementById("ex1").innerHTML += "Operação inválida!"
+            }
+            //saída
+        }
+    </script>
+
+
+
+    <script>
+        var carro = { // OBJETO
+            cor: "branca",
+            qtdPortas: 4,
+            marca: "Fiat"
+        }
+        console.log(carro);
+    </script>
+    <script>
+        var objOperacoes = {
+            resultado: null,
+            valor1: null,
+            valor2: null,
+            somar: function() {
+                this.resultado = this.valor1 + this.valor2;
+                return this.resultado;
+            },
+            iniciarValores: function (a, b) {
+                this.valor1 = a;
+                this.valor2 = b;
+
+            }
+        }
+        var x = 20;
+        var y = 30;
+        objOperacoes.iniciarValores (x, y);
+        console.log(objOperacoes.somar(x, y));
+        console.log(objOperacoes.valor1);
+        console.log(objOperacoes.valor2);
+    </script>
+</body>
+</html>

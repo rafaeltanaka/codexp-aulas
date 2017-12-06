@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercícios Array</title>
+</head>
+
+<body>
+    <h1>Exercícios Arrays</h1>
+    <h2>Exercício 37</h2>
+    <p>Faça um programa que contenha um vetor de 10 elementos. Solicite ao usuário que digite números pares, inteiros, e os
+        guarde no vetor. Para isso utilize a estrutura de repetição ENQUANTO. Ao final, exiba todos os valores com a estrutura
+        de repetição PARA.</p>
+    <button type="button" onclick="fA37()">Teste!</button>
+    <p id="ea37"></p>
+    <script>
+        function fA37() {
+            var i = 0;
+            var arrNumeros = [];
+            while (i <= 2) {
+                var numero = parseInt(prompt("Digite um número par e inteiro"));
+                if (numero == 0) {
+                    alert("Número incorreto!");
+                } else if (numero % 2 == 0) {
+                    arrNumeros.push(numero);
+                    i++;
+                } else
+                    alert("Número incorreto!")
+            }
+            for (i = 0; i <= 2; i++) {
+                document.getElementById("ea37").innerHTML += arrNumeros[i] + "<br>"
+            }
+            console.log(arrNumeros);
+        }
+    </script>
+    <h2>Exercício 38</h2>
+    <p>Faça um programa que carregue 1 vetor de 6 elementos numéricos inteiros. Calcule e imprima a quantidade de números ímpares e a quantidade de números pares.</p>
+    <button type="button" onclick="fA38()">Teste!</button>
+    <p id="ea38"></p>
+    <script>
+        function fA38() {
+            var arrNumeros = [];
+                for (i = 0; i < 6; i++) {
+                    arrNumeros[i] = parseInt(prompt("Digite um número"));
+                }
+            for (i = 0; i < 6; i++) {
+                
+            }
+        }
+    </script>
+</body>
+
+</html>
