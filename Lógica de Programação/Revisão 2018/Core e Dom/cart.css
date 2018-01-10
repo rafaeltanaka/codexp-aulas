@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.status{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    left: 0.5%;
+    position: relative;
+    width: 99%;
+}
+.shopping, .info, .pay{
+    align-items: center;
+    border: 1px grey solid;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 5rem;
+    width: 33%;
+}
+.shopping{
+    color: #ffffff;
+    background-color: #c04e79
+}
+.circle{
+    align-items: center;
+    border: 1px grey solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    margin: 5px;
+    padding: 1px;
+    width: 20px;
+}
+.itens{
+    display: flex;
+    justify-content: flex-start;
+}
+.itens__quantity{
+    font-weight: bold;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./cart.css">
+    <title>Core e dom</title>
+</head>
+<body>
+    <header class="status">
+        <span class="shopping">
+            <p class="circle">1</p>
+            <p>Shopping Cart</p>
+        </span>
+        <span class="info">
+            <p class="circle">2</p>
+            <p>Shopping Info</p>
+        </span>
+        <span class="pay">
+            <p class="circle">3</p>
+            <p>Payment Method</p>
+        </span>
+    </header>
+    <main>
+        <div class="itens">
+            <p id="itens__quantity"></p>
+        </div>
+        <table class="">
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="3"></th>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>quantity</th>
+                    <th>total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <section class="subtotal">
+                <span class="subtotal__text">Subtotal</span>
+                <p class="subtotal__$">$</p>
+                <p class="subtotal__value"></p>
+        </section>
+        <section>
+            <a href="">
+                <p><</p>
+                <p>Continue Shopping</p>
+            </a>
+            <a href="">
+                <p>Shipping Info</p>
+                <p>></p>
+            </a>
+        </section>
+    </main>
+
+    <script src="./cart.js"></script>
+</body>
+</html>

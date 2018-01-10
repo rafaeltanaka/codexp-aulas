@@ -1,17 +1,17 @@
 var clientes = [];
 
-function testar() {
-    event.preventDefault();
+function cadastrarClientes() {
+    event.preventDefault(); /* segura o evento (submit = envia para o servidor e dá um refresh) */
     
     // var nome = document.getElementById('nome').value;
     // var idade = document.getElementById('idade').value;
-    var objNome = document.getElementById('nome').value;
-    var objIdade = document.getElementById('idade').value;
+    var objNome = document.getElementById('nome');
+    var objIdade = document.getElementById('idade');
     
     
     var cli = new Object();
-        cli.nome = objNome.nome;
-        cli.idade = objIdade.idade;
+        cli.nome = objNome.value;
+        cli.idade = objIdade.value;
     // Objeto também pode ser criado
     // var cli = {
     //     nome: nome,
@@ -23,23 +23,34 @@ function testar() {
 
     var resultado;
 
-    if (idade >= 18) {
-        resultado = nome + ' é maior de idade';
-    } else {
-        resultado = nome + ' é menor de idade';
-    }
+    // if (idade >= 18) {
+    //     resultado = nome.value + ' é maior de idade';
+    // } else {
+    //     resultado = nome + ' é menor de idade';
+    // }
     
-var meuCarro = new Object();
-meuCarro.fabricacao = "Ford";
-meuCarro.modelo = "Mustang";
-meuCarro.ano = 1969;
-
-
-
+    if (cli.idade >= 18) {
+        resultado = cli.nome + ' é maior de idade';
+    } else {
+        resultado = cli.nome + ' é menor de idade';
+    }
 
     document.getElementById('resultado').innerHTML = resultado;
-    document.getElementById('resultado').innerHTML += clientes;
-    console.log(cli.nome, cli.idade);
     console.log(clientes);
-    console.log(meuCarro);
+    listarClientes()
+}
+
+function limparCampos() {
+    event.preventDefault();
+    document.getElementById('nome').value = '';
+    document.getElementById('idade').value = '';
+}
+
+function listarClientes() {
+    event.preventDefault();
+    var listaClientes = '';
+    for (var i = 0; i < clientes.length; i++) {
+        listaClientes += "<p>nome : "+clientes[i].nome+"<br>idade: "+clientes[i].idade+"</p>";
+    }
+    document.getElementById('resultado').innerHTML = listaClientes;
 }
