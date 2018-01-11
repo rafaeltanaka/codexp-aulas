@@ -5,53 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./cart.css">
-    <title>Core e dom</title>
+    <title>Shopping Cart</title>
 </head>
-<body>
+<body onload="listarProdutos()">
     <header class="status">
-        <span class="shopping">
+        <span class="cart">
             <p class="circle">1</p>
             <p>Shopping Cart</p>
         </span>
         <span class="info">
             <p class="circle">2</p>
-            <p>Shopping Info</p>
+            <p>Shipping Info</p>
         </span>
         <span class="pay">
             <p class="circle">3</p>
             <p>Payment Method</p>
         </span>
     </header>
-    <main>
+    <main class="content">
         <div class="itens">
             <p id="itens__quantity"></p>
         </div>
-        <table class="">
+        <table class="purchase">
             <colgroup>
-                <col>
-                <col>
-                <col>
-                <col>
-                <col>
-                <col>
+                <col class="column1">
+                <col class="column2">
+                <col class="column3">
+                <col class="column4">
+                <col class="column5">
+                <col class="column6">
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="3"></th>
-                    <th>name</th>
-                    <th>price</th>
-                    <th>quantity</th>
-                    <th>total</th>
+                    <th colspan="2" class="table-border"></th>
+                    <th class="table-border">name</th>
+                    <th class="table-border">price</th>
+                    <th class="table-border">quantity</th>
+                    <th class="table-border">total</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr id="products1">
+                    <td class="table-border circle">x</td>
+                    <td class="table-border" id="table-image"><img src="" alt=""></td>
+                    <td class="table-border" id="table-name">Name</td>
+                    <td class="table-border" id="table-price">$</td>
+                    <td class="table-border" id="table-quantity">3</td>
+                    <td class="table-border" id="table-total">6</td>
                 </tr>
             </tbody>
         </table>
@@ -60,16 +60,20 @@
                 <p class="subtotal__$">$</p>
                 <p class="subtotal__value"></p>
         </section>
-        <section>
-            <a href="">
-                <p><</p>
+        
+        <footer class="shop-nav">
+            <a href="" class="continue-shopping">
+                <p class="circle"><</p>
                 <p>Continue Shopping</p>
             </a>
-            <a href="">
-                <p>Shipping Info</p>
-                <p>></p>
+            <a href="./shipping.html" class="shipping-info">
+                <p class="shipping-info__text">Shipping Info</p>
+                <p class="shipping-info__arrow">></p>
             </a>
-        </section>
+        </footer>
+
+        <div id="products"></div>
+
     </main>
 
     <script src="./cart.js"></script>
