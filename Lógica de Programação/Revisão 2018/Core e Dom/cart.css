@@ -44,13 +44,14 @@
     position: relative;
     width: 90%;
 } */
-.itens{
+.itens__quantity{
     display: flex;
     justify-content: flex-start;
     left: 5%;
     position: relative;
 }
-.itens__quantity{
+.bold{
+    color: #000000;
     font-weight: bold;
 }
 .purchase{
@@ -88,6 +89,12 @@
     left: 5%;
     position: relative;
     width: 90%;
+}
+.subtotal__text{
+    color: #6d6b6b;
+}
+.subtotal__value{
+    font-size: 2rem;
 }
 
 .shop-nav{

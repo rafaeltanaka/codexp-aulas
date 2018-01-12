@@ -26,20 +26,37 @@ let produtos = [
         },
         nome: "DC Men´s Axis Snowboard Jacket",
         cor: "Azul",
-        preco: 89,
+        preco: 89.95,
         qtd: 2,
     },
 ];
 console.log(produtos);
-let itens = produtos.length;
-document.getElementById('itens__quantity').innerHTML = 'You have ' + itens + ' in your order';
+console.log(produtos.length);
+let qtdItens = produtos.length;
+
+// function qtdItens() {
+    
+// };
+function totalItens() {
+    if (qtdItens > 1) {
+        let itens = '<span class="bold"> ' + qtdItens + ' itens </span>';
+        document.getElementById('itens__quantity').innerHTML = '<p>Você tem' + itens + 'em seu pedido</p>';
+    } else if (qtdItens == 0) {
+        let itens = '<span class="bold"> NÃO TEM NENHUM ITEM </span>';
+        document.getElementById('itens__quantity').innerHTML = '<p>Você' + itens + 'em seu pedido</p>';
+    } else {
+        let itens = '<span class="bold"> ' + qtdItens + ' item</span>';
+        document.getElementById('itens__quantity').innerHTML = '<p>Você tem ' + itens + ' em seu pedido</p>';
+    };
+};
+
 
 function listarProdutos() {
     var template = "";
-    var subtotal = "";
+    var subtotal = 0;
+    
     for (var i = 0; i < produtos.length; i++) {
         var total = produtos[i].preco * produtos[i].qtd;
-        // subtotal += parseInt(total);
         template += '<tr>';
         template +=     '<td class="table-border"><i class="fas fa-times-circle remove-item" onclick="removerProdutos(' + i + ')"></i></td>';
         template +=     '<td class="table-border" id="table-image"><img src="' + produtos[i].imagem.src + '" alt="' + produtos[i].imagem.alt + '"></td>';
@@ -50,22 +67,23 @@ function listarProdutos() {
                             produtos[i].qtd + 
                             '<button onclick="adicionarItem(' + i + ')" class="plus-button">+</button>' + 
                             '</td>';
-        template +=     '<td class="table-border" id="table-total">' + total + '</td>';
+        template +=     '<td class="table-border" id="table-total">' + total.toFixed(2) + '</td>';
+        subtotal += total;
     };
     document.getElementById('products').innerHTML = template;
-    document.getElementById('subtotal-value').innerHTML = " " + subtotal;
-    console.log(subtotal);
+    document.getElementById('subtotal-value').innerHTML = '<p class="subtotal__text">Subtotal<span class="bold subtotal__value"> $ '+ subtotal.toFixed(2) + '</span></p>';
 };
 
 function removerProdutos(i) {
     produtos.splice(i, 1);
+    qtdItens = produtos.length;
     listarProdutos();
-}
+};
 function removerItem(i) {
     produtos[i].qtd = produtos[i].qtd - 1;
     listarProdutos();
-}
+};
 function adicionarItem(i) {
     produtos[i].qtd = produtos[i].qtd + 1;
     listarProdutos();
-}
+};

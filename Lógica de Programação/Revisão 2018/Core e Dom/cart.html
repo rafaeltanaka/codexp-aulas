@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./cart.css">
     <title>Shopping Cart</title>
 </head>
-<body onload="listarProdutos()">
+<body onload="listarProdutos(), totalItens()">
     <header class="status">
         <span class="cart">
             <p class="circle">1</p>
@@ -23,19 +23,9 @@
             <p>Payment Method</p>
         </span>
     </header>
-    <main class="content">
-        <div class="itens">
-            <p id="itens__quantity"></p>
-        </div>
+    <main>
+        <p id="itens__quantity" class="itens__quantity"></p>
         <table class="purchase">
-            <colgroup>
-                <col class="column1">
-                <col class="column2">
-                <col class="column3">
-                <col class="column4">
-                <col class="column5">
-                <col class="column6">
-            </colgroup>
             <thead>
                 <tr>
                     <th colspan="2" class="table-border"></th>
@@ -56,11 +46,10 @@
                 </tr> -->
             </tbody>
         </table>
-        <section class="subtotal">
-                <span class="subtotal__text">Subtotal</span>
-                <p class="subtotal__$">$</p>
-                <p class="subtotal__value" id="subtotal-value"></p>
-        </section>
+        <div class="subtotal" id="subtotal-value">
+                <!-- <p class="subtotal__text">Subtotal</p>
+                <p class="subtotal__value" ></p> -->
+        </div>
         
         <footer class="shop-nav">
             <a href="" class="continue-shopping">
@@ -72,11 +61,7 @@
                 <p class="shipping-info__arrow">></p>
             </a>
         </footer>
-
-        <div id="products1"></div>
-
     </main>
-
     <script src="./cart.js"></script>
 </body>
 </html>
