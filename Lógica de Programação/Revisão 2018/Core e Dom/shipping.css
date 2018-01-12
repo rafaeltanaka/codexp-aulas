@@ -37,23 +37,22 @@
     width: 20px;
 }
 
-
-.shipping-infos{
+.shipping__info{
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    left: 5%;
+    position: relative;
+    width: 90%;
 }
 .address, .contact{
-    width: 45%;
-}
-.address-info, .contact-info{
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
+    width: 50%
 }
 .method{
     display: flex;
     flex-flow: row wrap;
-
+    width: 100%;
 }
 .method__text{
     background-color: #cfcfcfce;
@@ -66,6 +65,7 @@
 .method__ultra{
     background-color: #cfcfcfce;
 }
+
 
 .shop-nav{
     height: 4rem;

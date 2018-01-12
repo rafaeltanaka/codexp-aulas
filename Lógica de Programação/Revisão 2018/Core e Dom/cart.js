@@ -78,6 +78,7 @@ function removerProdutos(i) {
     produtos.splice(i, 1);
     qtdItens = produtos.length;
     listarProdutos();
+    totalItens();
 };
 function removerItem(i) {
     produtos[i].qtd = produtos[i].qtd - 1;
