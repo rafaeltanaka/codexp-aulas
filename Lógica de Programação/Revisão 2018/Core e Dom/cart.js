@@ -36,14 +36,36 @@ document.getElementById('itens__quantity').innerHTML = 'You have ' + itens + ' i
 
 function listarProdutos() {
     var template = "";
+    var subtotal = "";
     for (var i = 0; i < produtos.length; i++) {
         var total = produtos[i].preco * produtos[i].qtd;
-        template += '<td class="table-border circle">x</td>';
-        template += '<td class="table-border" id="table-image"><img src="' + produtos[i].imagem.src + '" alt="' + produtos[i].imagem.alt + '"></td>';
-        template += '<td class="table-border" id="table-name">' + produtos[i].nome + '</td>';
-        template += '<td class="table-border" id="table-price">' + produtos[i].preco + '</td>';
-        template += '<td class="table-border" id="table-quantity">' + produtos[i].nome + '</td>';
-        template += '<td class="table-border" id="table-total">' + total + '</td>';
+        // subtotal += parseInt(total);
+        template += '<tr>';
+        template +=     '<td class="table-border"><i class="fas fa-times-circle remove-item" onclick="removerProdutos(' + i + ')"></i></td>';
+        template +=     '<td class="table-border" id="table-image"><img src="' + produtos[i].imagem.src + '" alt="' + produtos[i].imagem.alt + '"></td>';
+        template +=     '<td class="table-border" id="table-name">' + produtos[i].nome + '</td>';
+        template +=     '<td class="table-border" id="table-price">' + produtos[i].preco + '</td>';
+        template +=     '<td class="table-border" id="table-quantity">' + 
+                            '<button onclick="removerItem(' + i + ')" class="minus-button">-</button>' + 
+                            produtos[i].qtd + 
+                            '<button onclick="adicionarItem(' + i + ')" class="plus-button">+</button>' + 
+                            '</td>';
+        template +=     '<td class="table-border" id="table-total">' + total + '</td>';
     };
     document.getElementById('products').innerHTML = template;
+    document.getElementById('subtotal-value').innerHTML = " " + subtotal;
+    console.log(subtotal);
 };
+
+function removerProdutos(i) {
+    produtos.splice(i, 1);
+    listarProdutos();
+}
+function removerItem(i) {
+    produtos[i].qtd = produtos[i].qtd - 1;
+    listarProdutos();
+}
+function adicionarItem(i) {
+    produtos[i].qtd = produtos[i].qtd + 1;
+    listarProdutos();
+}

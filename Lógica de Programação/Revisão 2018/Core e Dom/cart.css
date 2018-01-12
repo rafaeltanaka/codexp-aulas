@@ -13,7 +13,7 @@
 }
 .cart, .info, .pay{
     align-items: center;
-    border: 1px grey solid;
+    border: 1px #808080 solid;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -29,7 +29,7 @@
 }
 .circle{
     align-items: center;
-    border: 1px grey solid;
+    border: 1px #808080 solid;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -63,6 +63,24 @@
 .table-border{
     border: 1px solid #000000;
 }
+.remove-item{
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #cfcfcfce;
+}
+.remove-item:hover{
+    color: #ff0000;
+}
+.minus-button{
+    height: 1rem;
+    margin-right: 0.5rem;
+    width: 1rem;
+}
+.plus-button{
+    height: 1rem;
+    margin-left: 0.5rem;
+    width: 1rem;
+}
 
 .subtotal{
     display: flex;
@@ -88,6 +106,9 @@
     top: 50%;
     transform: translateY(-50%);
     text-decoration: none;
+}
+.continue-shopping__arrow, .continue-shopping__text{
+    color: #000000;
 }
 .shipping-info{
     align-items: center;

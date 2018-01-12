@@ -27,7 +27,7 @@
 }
 .circle{
     align-items: center;
-    border: 1px grey solid;
+    border: 1px #cfcfcfce;
     border-radius: 10px;
     display: flex;
     justify-content: center;
