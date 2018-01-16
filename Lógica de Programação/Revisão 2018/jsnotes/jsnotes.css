@@ -13,6 +13,11 @@
 .navbar__menu{
     margin: 0 0.5rem;
 }
+.navbar__menu,
+.navbar__title,
+.navbar__icons{
+    padding-top: 0.3rem;
+}
 .navbar__title{
     font-weight: bold;
     margin: 0 0.5rem;
@@ -24,6 +29,7 @@
     flex-grow: 1;
     height: 2rem;
     margin-right: 0.5rem;
+    width: 30%;
 }
 .search-label{
     display: flex;
@@ -38,6 +44,34 @@
     text-transform: uppercase;
 }
 .search-bar{
+    background-color: #f5b400;
+    border-color: #f5b400;
+    border-width: 0;
     height: 2rem;
     width: 100%;
+}
+.navbar__icons{
+    margin-right: 0.5rem;
+}
+.form-reg{
+    left: 10%;
+    position: relative;
+    margin-top: 5%;
+    width: 80%;
+}
+.note-reg__title,
+.note-reg__subtitle,
+.subform{
+    text-transform: uppercase;
+}
+.note-reg__subtitle,
+.note-reg__name,
+.subform{
+    margin-top: 0.5rem;
+}
+.button-reg{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    width: 50%;
 }

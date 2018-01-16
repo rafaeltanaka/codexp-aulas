@@ -29,17 +29,18 @@
         </nav>
     </header>
     <main>
-        <form action="">
-            <fieldset>
-                <legend>cadastro de notas</legend>
-                <label for="">título</label>
-                <input type="text" text="">
-                <fieldset>
+        <form action="" class="form-reg">
+            <fieldset class="note-reg">
+                <legend class="note-reg__title">cadastro de notas</legend>
+                <label for="" class="note-reg__subtitle">título</label>
+                <input type="text" text="" class="note-reg__name">
+                <fieldset class="subform">
+                    <legend class="subform__title">itens</legend>
                     <i class="far fa-plus-square"></i>
-                    <div>
-                        <button></button>
-                        <button></button>
-                        <button></button>
+                    <div class="button-reg">
+                        <button class="button-reg__wdom">Cadastrar s/ DOM</button>
+                        <button class="button-reg__clean">Limpar</button>
+                        <button class="button-reg__dom">Cadastrar c/ DOM</button>
                     </div>
                 </fieldset>
             </fieldset>
