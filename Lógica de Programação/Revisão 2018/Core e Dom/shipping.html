@@ -27,24 +27,24 @@
             <form action="" class="shipping__info">
                 <fieldset class="address">
                     <legend>Shipping Address</legend>
-                    <select name="country" id="">
-                        <option value="Brasil">Brasil</option>
-                        <option value="Canada">Canadá</option>
-                        <option value="EUA">Estados Unidos</option>
+                    <select>
+                        <option value="Brasil" name="country" id="country">Brasil</option>
+                        <option value="Canada" name="country" id="country">Canadá</option>
+                        <option value="EUA" name="country" id="country">Estados Unidos</option>
                     </select>
-                    <select name="" id="">
-                            <option value="Sao Paulo">São Paulo</option>
-                            <option value="Ontario">Ontario</option>
-                            <option value="Los Angeles">Los Angeles</option>
+                    <select>
+                            <option value="Sao Paulo" name="state" id="state">São Paulo</option>
+                            <option value="Ontario" name="state" id="state">Ontario</option>
+                            <option value="Los Angeles" name="state" id="state">Los Angeles</option>
                     </select>
-                    <input type="text" name="state" id="" placeholder="Estado/Região/Província">
-                    <input type="text" name="zip" id="" placeholder="CEP">
-                    <input type="text" name="address" id="" placeholder="Endereço">
-                    <input type="text" name="compliment" id="" placeholder="Complemento">
+                    <input type="text" name="state" id="state" placeholder="Estado/Região/Província">
+                    <input type="text" name="zip" id="zip" placeholder="CEP">
+                    <input type="text" name="address" id="address" placeholder="Endereço">
+                    <input type="text" name="compliment" id="compliment" placeholder="Complemento">
                 </fieldset>
                 <fieldset class="contact">
                     <legend>Contact Info</legend>
-                    <input type="text" name="first-name" id="" placeholder="Primeiro Nome">
+                    <input type="text" name="first-name" id="" onclick="validarFormulario()" placeholder="Primeiro Nome">
                     <input type="text" name="last-name" id="" placeholder="Último Nome">
                     <input type="email" name="email" id="" placeholder="E-Mail">
                     <input type="tel" name="phone" id="" placeholder="Telefone">
@@ -68,7 +68,7 @@
             <p class="circle"><</p>
             <p>Continue Shopping</p>
         </a>
-        <a href="./shipping.html" class="shipping-info">
+        <a href="./shipping.html" class="shipping-info" onclick="validarFormulario()">
             <p class="shipping-info__text">Shipping Info</p>
             <p class="shipping-info__arrow">></p>
         </a>
