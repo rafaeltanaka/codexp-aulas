@@ -59,19 +59,39 @@
     margin-top: 5%;
     width: 80%;
 }
+.note-reg{
+    border-radius: 5px;
+}
 .note-reg__title,
 .note-reg__subtitle,
-.subform{
+.subform__title{
     text-transform: uppercase;
 }
 .note-reg__subtitle,
-.note-reg__name,
-.subform{
+.note-reg__name{
     margin-top: 0.5rem;
+}
+.subform{
+    border-radius: 5px;
+    margin: 0.5rem;
+}
+.subform__plus{
+    margin: 0.3rem;
+    display: block;
 }
 .button-reg{
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    width: 50%;
+}
+.button-reg__wdom,
+.button-reg__clean,
+.button-reg__dom{
+    background-color: #ffbb00;
+    border-color: #ffbb00;
+    border-radius: 5px;
+    box-shadow: 0.125rem 0.125rem #cecece;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.3rem;
+    width: 8rem;
 }

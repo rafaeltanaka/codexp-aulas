@@ -18,7 +18,7 @@
                     <i class="fas fa-search search-label__icon"></i>
                     <label for="search" class="search-label__text">pesquisar</label>
                 </span>
-                <input type="text" name="search" class="search-bar">
+                <input type="text" name="search" class="search-bar" onclick="" onfocusout="myFunction()">
             </form>
             <span class="navbar__icons">
                 <i class="fas fa-redo"></i>
@@ -36,16 +36,17 @@
                 <input type="text" text="" class="note-reg__name">
                 <fieldset class="subform">
                     <legend class="subform__title">itens</legend>
-                    <i class="far fa-plus-square"></i>
+                    <i class="far fa-plus-square subform__plus"></i>
                     <div class="button-reg">
                         <button class="button-reg__wdom">Cadastrar s/ DOM</button>
                         <button class="button-reg__clean">Limpar</button>
                         <button class="button-reg__dom">Cadastrar c/ DOM</button>
                     </div>
+                    <div class="subform__item"></div>
                 </fieldset>
             </fieldset>
         </form>
     </main>
 </body>
-
+<script src="./jsnotes.js"></script>
 </html>
