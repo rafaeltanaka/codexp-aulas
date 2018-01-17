@@ -33,9 +33,9 @@
                         <option value="EUA" name="country" id="country">Estados Unidos</option>
                     </select>
                     <select>
-                            <option value="Sao Paulo" name="state" id="state">São Paulo</option>
-                            <option value="Ontario" name="state" id="state">Ontario</option>
-                            <option value="Los Angeles" name="state" id="state">Los Angeles</option>
+                            <option value="Sao Paulo" name="city" id="city">São Paulo</option>
+                            <option value="Ontario" name="city" id="city">Ontario</option>
+                            <option value="Los Angeles" name="city" id="city">Los Angeles</option>
                     </select>
                     <input type="text" name="state" id="state" placeholder="Estado/Região/Província">
                     <input type="text" name="zip" id="zip" placeholder="CEP">
@@ -44,10 +44,10 @@
                 </fieldset>
                 <fieldset class="contact">
                     <legend>Contact Info</legend>
-                    <input type="text" name="first-name" id="" onclick="validarFormulario()" placeholder="Primeiro Nome">
-                    <input type="text" name="last-name" id="" placeholder="Último Nome">
-                    <input type="email" name="email" id="" placeholder="E-Mail">
-                    <input type="tel" name="phone" id="" placeholder="Telefone">
+                    <input type="text" name="first-name" id="first-name" placeholder="Primeiro Nome">
+                    <input type="text" name="last-name" id="last-name" placeholder="Último Nome">
+                    <input type="email" name="email" id="email" placeholder="E-Mail">
+                    <input type="tel" name="phone" id="phone" placeholder="Telefone">
                     <div class="method">
                         <label class="method__text">Shipping Method</label>
                         <span class="method__standard">
@@ -63,6 +63,12 @@
             </form>
         </section>
     </main>
+    
+    <button onclick="validarEndereco()">Validar Endereço</button>
+    <button onclick="validarContato()">Validar Contato</button>
+    <button onclick="validarFormulario()">Validar Forumulario</button>
+    <div id="products">1</div>
+    
     <footer class="shop-nav">
         <a href="./cart.html" class="continue-shopping">
             <p class="circle"><</p>
@@ -73,6 +79,7 @@
             <p class="shipping-info__arrow">></p>
         </a>
     </footer>
+
     <script src="./shipping.js"></script>
 </body>
 </html>

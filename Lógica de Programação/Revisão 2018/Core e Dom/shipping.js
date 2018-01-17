@@ -15,32 +15,53 @@ function validarFormulario() {
     event.preventDefault();
     objEndereco = {
         pais: document.getElementById('country').value,
-        estado: document.getElementById('state').value,
-        cep: document.getElementById('zip').value,
+        estado: document.getElementById('state'),
+        cidade: document.getElementById('city'),
+        cep: document.getElementById('zip'),
         end: document.getElementById('address').value,
-        compliment: document.getElementById('compliment').value,
+        compliment: document.getElementById('compliment'),
     };
-    for (var property1 in objEndereco) {
-        if (objEndereco[property1] === '') {
-            alert('Preencha o  campo ' + property1);
-            alert(this.id);
+    //gerar objeto contato
+    objContato = {
+        pNome: document.getElementById('first-name').value,
+        uNome: document.getElementById('last-name'),
+        email: document.getElementById('email'),
+        tel: document.getElementById('phone').value,
+    };
+};
+
+function validarEndereco() {
+    validarFormulario();
+    for (var property in objEndereco) {
+        objEndereco[property].value.trim();
+        if (objEndereco[property].value === '') {
+            objEndereco[property].focus();
+            alert('Preencha o  campo ' + objEndereco[property].placeholder);
+            console.log(objEndereco);
             return;
         };
     };
-
-    // if (objEndereco.cep === '') {
-    //     console.log("errado");
-    // } else {
-    //     console.log("certo");
-    // }
-    console.log(objEndereco);
-    //gerar objeto contato
-}
-
-function validarEndereco() {
-
-}
+    
+};
+var x = 'valor1';
 
 function validarContato() {
-
+    validarFormulario();
+    for (var property in objContato) {
+        // x = property.value;
+        // document.getElementById('products').innerHTML = property.value;
+        console.log(objContato[property]);
+        // if (x.trim() == 0) {
+        //     console.log(objContato.pNome);
+        //     alert('Preencha o  campo ' + objContato[property].placeholder);
+        //     objContato[property].focus();
+        //     console.log(objContato);
+        //     return;
+        // } else {
+        //     objContato[property] = objContato[property].value;
+        // };
+    };
+    console.log(property.value);
+    // console.log(objContato);
+    // console.log('iahdijwdioaw ' + x);
 }
